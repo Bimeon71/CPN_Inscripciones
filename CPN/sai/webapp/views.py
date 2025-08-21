@@ -19,4 +19,8 @@ def nuevaInscripcion(request):
     else:
         formNuevo = InscripcionForm()
     return render(request, 'nuevo.html', {'formNuevo': formNuevo})
+    #return render(request, 'confirmacion.html')
+
+# def confirmarInscripcion(request):
+#     return render(request, 'confirmacion.html')
 

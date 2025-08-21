@@ -4,7 +4,7 @@ OPCIONES_MOD = [
     (1, 'Iniciación/extraescolar'),
     (2, 'Competición 2 días'),
     (3, 'Competición 3 días'),
-    (4, 'Grupo Show (1 hora semanal)'),
+    #(4, 'Grupo Show (1 hora semanal)'),
 ]
 # Create your models here.
 class Inscripcion(models.Model):
@@ -14,6 +14,7 @@ class Inscripcion(models.Model):
     fecha = models.DateField()
     #modalidad = models.CharField(max_length=2)
     modalidad = models.IntegerField(choices=OPCIONES_MOD, default=2)
+    grupoShow = models.BooleanField(default=False)
     padre = models.CharField(max_length=100)
     madre = models.CharField(max_length=100)
     telPadre = models.CharField(max_length=15)

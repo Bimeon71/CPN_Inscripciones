@@ -23,4 +23,5 @@ from webapp.views import nuevaInscripcion
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", nuevaInscripcion, name="index"),
+    #path("confirmacion/", confirmarInscripcion, name="confirmacion"),
 ]

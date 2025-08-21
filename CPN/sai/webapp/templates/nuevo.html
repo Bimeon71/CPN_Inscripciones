@@ -1,40 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-    <title>CPN</title>
+    <title>CPN. Inscripción</title>
 </head>
 <body>
 
     <form method="POST">
         <div class="container">
-
-
-        <div class="card m-3">
-            <h2 class="card-title text-center">Club Patinaje Nájera. Temporada 2025-2026</h2>
-            <h6 class="card-subtitle mb-2 text-body-secondary text-center">El plazo para formalizar la inscripción finaliza el <b>domingo 31 de agosto de 2025</b></h6>
-            <div class="card-body">
-                {{formNuevo}}
-<!--                <div class="mb-3">-->
-<!--                    <label for="nombre" class="form-label">Nombre</label>-->
-<!--                    <input id="nombre" type="text" class="form-control" placeholder="nombre del patinador/a">-->
-<!--                </div>-->
-<!--                <div class="mb-3">-->
-<!--                    <label for="apellidos" class="form-label">Apellidos</label>-->
-<!--                    <input id="apellidos" type="text" class="form-control" placeholder="apellidos del patinador/a">-->
-<!--                </div>-->
-<!--                <div class="mb-3">-->
-<!--                    <label for="domicilio" class="form-label">Domicilio</label>-->
-<!--                    <input id="domicilio" type="text" class="form-control" placeholder="dirección">-->
-<!--                </div>-->
-
+            <div class="card m-3">
+                <h2 class="card-title text-center">Club Patinaje Nájera. Temporada 2025-2026</h2>
+                <h6 class="card-subtitle mb-2 text-body-secondary text-center">El plazo para formalizar la inscripción finaliza el <b>martes 30 de septiembre de 2025</b></h6>
+                <div class="card-body">
+                    {{formNuevo}}
+                    <div class="p-2 mb-2 bg-black text-warning">Por tema de protección de datos, para facilitar el número de cuenta (en caso de cambio o por nueva inscripción) se deberá poner en contacto con el Club</div>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-primary mt-3 w-25" type="submit">Grabar</button>
+                    {% csrf_token %}
+                </div>
             </div>
-            <div class="card-footer">
-                <button class="btn btn-primary mt-3 w-25" type="submit">Grabar</button>
-                {% csrf_token %}
-            </div>
-        </div>
         </div>
     </form>
 
